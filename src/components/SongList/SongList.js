@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSongs } from '../../redux/actions';
+import { fetchSongsRequest } from '../../redux/actions';
 import SongItem from '../SongItem/SongItem';
 
 
@@ -10,7 +10,7 @@ const SongList = () => {
   const songs = useSelector(state => state.songs);
 
   useEffect(() => {
-    dispatch(fetchSongs());
+    dispatch(fetchSongsRequest());
   }, [dispatch]);
 
   return (
